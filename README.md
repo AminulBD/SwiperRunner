@@ -41,4 +41,4 @@ $('.swiper-container').each(function() {
 });
 ````
 
-**Please check example folder for demos**
+**Please check examples folder for demos**
