@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example - Two Way Gallery</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<!-- Demo styles -->
+	<style>
+		html, body {
+			position: relative;
+			height: 100%;
+		}
+		body {
+			background: #000;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color:#000;
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 100vh;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+
+		.swiper-slide-content {
+			position: absolute;
+			top: 100px;
+			right: 0;
+			bottom: 0;
+			left: 100px;
+		}
+
+		.swiper-slide [data-animate] {
+			color: #fff;
+			text-align: center;
+			opacity: 0;
+			-webkit-transition: opacity 0.2s;
+			transition: opacity 0.2s;
+			-webkit-transition-delay: 700ms;
+			transition-delay: 700ms;
+		}
+
+		.swiper-slide-active [data-animate],
+		.swiper-slide-duplicate-active [data-animate] {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Swiper -->
+	<!-- You can define the swiper API or settings in "data-swiper-config" as JSON object -->
+	<div
+		 class="swiper-container"
+		 data-swiper-config='{"spaceBetween": 10, "loop": true, "loopedSlides": 10, "autoplay": 3000, "grabCursor": true}'
+	>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide1&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide2&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide3&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide4&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide5&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide6&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide7&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide8&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide9&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide10&w=640&h=480)">
+				<div class="swiper-slide-content">
+					<h1 class="layer" data-animate="fadeInUp">This is animation</h1>
+					<h2 class="layer" data-animate="fadeInUp" data-delay="0.3s" data-duration="1.0s">This is animation2</h2>
+				</div>
+			</div>
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+	</div>
+	
+	
+	<!-- Load Dependencies -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+	<script src="../dist/js/swiperRunner.min.js"></script>
+
+	<!-- Initialize Swiper Runner -->
+	<script>
+		var obj = new swiperRunner('.swiper-container');
+	</script>
+</body>
+</html>

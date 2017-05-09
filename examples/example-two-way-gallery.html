@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example - Two Way Gallery</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+	<!-- Demo styles -->
+	<style>
+		html, body {
+			position: relative;
+			height: 100%;
+		}
+		body {
+			background: #000;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color:#000;
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+		.gallery-top {
+			height: 80%;
+			width: 100%;
+		}
+		.gallery-thumbs {
+			height: 20%;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+		.gallery-thumbs .swiper-slide {
+			width: 25%;
+			height: 100%;
+			opacity: 0.4;
+		}
+		.gallery-thumbs .swiper-slide-active {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Swiper -->
+	<!-- You can define the swiper API or settings in "data-swiper-config" as JSON object -->
+	<div
+		 class="swiper-container gallery-top"
+		 data-swiper-config='{"spaceBetween": 10, "loop": true, "loopedSlides": 10, "autoplay": 3000, "grabCursor": true}'
+	>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide1&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide2&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide3&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide4&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide5&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide6&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide7&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide8&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide9&w=640&h=480)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=144&bg=222222&txt=Slide10&w=640&h=480)"></div>
+		</div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+	</div>
+	
+	<!-- As Nav -->
+	<!-- You can define the swiper API or settings in "data-swiper-config" as JSON object -->
+	<div
+		 class="swiper-container gallery-thumbs"
+		 data-swiper-config='{"spaceBetween": 10, "centeredSlides": true, "slidesPerView": "auto", "touchRatio": 0.2, "slideToClickedSlide": true, "loop": true, "loopedSlides": 10}'
+	>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide1&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide2&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide3&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide4&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide5&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide6&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide7&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide8&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide9&w=200&h=200)"></div>
+			<div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=30&bg=222222&txt=Slide10&w=200&h=200)"></div>
+		</div>
+	</div>
+
+	
+	
+	<!-- Load Dependencies -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+	<script src="../dist/js/swiperRunner.min.js"></script>
+
+	<!-- Initialize Swiper Runner -->
+	<script>
+		var obj = new swiperRunner('.gallery-top');
+		// The setNav method will make link to main carousel.
+		obj.setNav('.gallery-thumbs');
+	</script>
+</body>
+</html>
