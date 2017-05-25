@@ -69,13 +69,17 @@
 
 			var $current = $(swiper.slides[swiper.activeIndex]);
 
-			$('[data-animate]', $current).each(function() {
+			$('[data-animate]', $current).each(function(i) {
 				var $this = $(this),
 					animation = $this.data('animate'),
-					delay = $this.data('delay'),
-					duration = $this.data('duration');
+					delayData = $this.data('delay'),
+					duration = $this.data('duration'),
+					speed = swiper.params.speed + 'ms',
+					indexVal = Number( '0.' + i ) * 2,
+					delay = delayData ? delayData : (0.2 + indexVal) + 's';
 
 				$this.css({
+					"visibility": "visible",
 					"-webkit-animation-delay": delay,
 					"animation-delay": delay,
 					"-webkit-animation-duration": duration,
@@ -100,7 +104,8 @@
 				var $this = $(this),
 					animation = $this.data('animate');
 
-				$this.removeClass( animation + ' animated' )
+				$this.removeClass(animation + ' animated');
+				$this.css('visibility', 'hidden');
 			});
 		};
 
