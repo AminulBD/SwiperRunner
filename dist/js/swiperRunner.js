@@ -150,18 +150,25 @@
 
 			// On Init
 			settings.onInit = function(swiper) {
+				// Nav Preview
 				if (settings.navPreview) {
 					navPreview(swiper, settings);
+				}
+
+				// Playing Control
+				if ( swiper.autoplaying ) {
+					$playBtn.removeClass('active');
+					$pauseBtn.addClass('active');
 				}
 			}
 
 			// On Slide Change Start
 			settings.onSlideChangeStart = function(swiper) {
 
-				// Fix Autoplay Buttons
+				// Playing Control
 				if ( false === swiper.autoplaying ) {
-					$playBtn.toggleClass('active', true);
-					$pauseBtn.toggleClass('active', false);
+					$playBtn.addClass('active');
+					$pauseBtn.removeClass('active');
 				}
 
 				// Navigation Slide Preview
