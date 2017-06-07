@@ -12,7 +12,7 @@
 
 	'use strict';
 
-	var swiperRunner = function(selector) {
+	var SwiperRunner = function(selector) {
 
 		var sr = this,
 			main,
@@ -126,7 +126,7 @@
 				$pauseBtn 	= $('.swiper-pause', $carousel);
 
 			// Set Defaults
-			var defaults = {
+			var settings = {
 				nextButton: ($navNext.length) ? $navNext : null,
 				prevButton: ($navPrev.length) ? $navPrev : null,
 				scrollbar: ($scrollbar.length) ? $scrollbar : null,
@@ -136,7 +136,7 @@
 			};
 
 			// Merge Objects
-			var settings = Object.assign({}, defaults, $config);
+			$.extend(true, settings, $config );
 
 			// Render the pagination
 			if ($pagination.length) {
@@ -254,5 +254,5 @@
 
 	}
 
-	window.swiperRunner = swiperRunner;
+	window.SwiperRunner = SwiperRunner;
 })(jQuery);
