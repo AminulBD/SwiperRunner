@@ -3,7 +3,7 @@
  * Easy way to use Swiper.js
  *
  * @version 1.0.0
- * @link https://github.com/AminulBD/swiperRunner
+ * @link https://github.com/AminulBD/SwiperRunner
  * @license MIT
  *
  * Copyright 2017, Aminul Islam
